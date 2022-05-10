@@ -1,0 +1,15 @@
+<%- include('header') %>
+<h2>Medlemslista från A-Ö</h2>
+<a href="/members">Default</a>
+<a href="/members/a-z">Sortera A-Ö</a>
+<a href="/members/z-a">Sortera Ö-A</a>
+  <ul>
+    <% ascMembers.forEach((ascMember) => { %>
+      <li><a href="/member/<%= ascMember._id%>">
+        <%= ascMember.name%>
+          </a>
+      </li>
+    <% }); %>
+  </ul>
+
+  <%- include('footer') %>

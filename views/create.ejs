@@ -1,0 +1,20 @@
+<%- include('header') %>
+<h2>Fyll i formuläret för att gå med i bokklubben</h2>
+  <form action="/members/create" method="post">
+    <label for="name">Namn:</label>
+    <input type="text" name="name" id="name"><br>
+
+    <label for="email">Email:</label>
+    <input type="email" name="email" id="email"><br>
+
+    <label for="phone">Telefonnummer:</label>
+    <input type="tel" name="phone" id="phone"><br>
+
+    <label for="date">Startdatum:</label>
+    <input type="date" name="date" id="date"><br>
+
+    <label for="favAuthor">Favoritförfattare:</label>
+    <input type="text" name="favAuthor" id="favAuthor"><br>
+    <button>Spara</button>
+  </form>
+  <%- include('footer') %>

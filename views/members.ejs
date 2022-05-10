@@ -1,0 +1,14 @@
+<%- include('header') %>
+<h2>Medlemslista</h2>
+<a href="/members/a-z">Sortera A-Ö</a>
+<a href="/members/z-a">Sortera Ö-A</a>
+  <ul>
+    <% members.forEach((member) => { %>
+      <li><a href="/member/<%= member._id%>">
+        <%= member.name%>
+          </a>
+      </li>
+    <% }); %>
+  </ul>
+
+  <%- include('footer') %>

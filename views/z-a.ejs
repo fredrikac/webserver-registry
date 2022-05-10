@@ -1,0 +1,15 @@
+<%- include('header') %>
+<h2>Medlemslista från Ö-A</h2>
+<a href="/members">Default</a>
+<a href="/members/a-z">Sortera A-Ö</a>
+<a href="/members/z-a">Sortera Ö-A</a>
+  <ul>
+    <% descMembers.forEach((descMember) => { %>
+      <li><a href="/member/<%= descMember._id%>">
+        <%= descMember.name%>
+          </a>
+      </li>
+    <% }); %>
+  </ul>
+
+  <%- include('footer') %>

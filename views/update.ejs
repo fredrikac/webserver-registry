@@ -1,0 +1,23 @@
+<%- include('header') %>
+<h2>Uppdatera medlemsuppgifter för <%= name%></h2>
+
+<form action="/member/<%= _id%>/update" method="post">
+  <label for="name">Namn:</label>
+  <input type="text" name="name" id="name" value="<%= name%>"><br>
+
+  <label for="email">Email:</label>
+  <input type="email" name="email" id="email" value="<%= email%>"><br>
+
+  <label for="phone">Telefonnummer:</label>
+  <input type="tel" name="phone" id="phone" value="<%= phone%>"><br>
+
+  <!--<label for="date">Startdatum:</label>
+  <input type="date" name="date" id="date" value="<%= date%>"><br>
+  Detta funkar inte, men det kanske inte heller behövs?-->
+
+  <label for="favAuthor">Favoritförfattare:</label>
+  <input type="text" name="favAuthor" id="favAuthor" value="<%= favAuthor%>"><br>
+  <button>Uppdatera</button>
+</form>
+
+<%- include('footer') %>

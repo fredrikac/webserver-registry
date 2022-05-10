@@ -1,0 +1,13 @@
+<%- include('header') %>
+  <h1><%= name %></h1>
+  <p><%= email %></p>
+  <p><%= phone %></p>
+  <p>Medlem sedan <%= date %></p>
+  <p>Favoritförfattare: <%= favAuthor%></p>
+  <a href="/member/<%= _id%>/update">
+  <button>Ändra</button></a>
+
+  <a href="/member/<%= _id%>/delete">
+  <button id="deleteBtn" data-id="<%=_id%>">Ta bort</button></a>
+  <script src="/main.js"></script>
+  <%- include('footer') %>
